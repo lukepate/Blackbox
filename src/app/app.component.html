@@ -1,0 +1,541 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BlackBox</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <div class="header">
+       <div class="header-text">
+         <ul>
+
+           <div class="desktop">
+             <li><a href="#home"><img class="logo" src="./assets/images/logo.png"></a></li>
+             <li style="float:right"><a class="active" href="#faq">FAQS</a></li>
+             <li style="float:right"><a class="active" href="#partners">PARTNERS</a></li>
+             <li style="float:right"><a class="active" href="#team">TEAM</a></li>
+             <li style="float:right"><a class="active" href="#tokensale">TOKENSALE</a></li>
+             <li style="float:right"><a class="active" href="#map">ROADMAP</a></li>
+             <li style="float:right"><a class="active" href="#token">BLACKBOX TOKEN</a></li>
+             <li style="float:right"><a class="active" href="#platform">PLATFORM</a></li>
+             <li style="float:right"><a class="active" href="#overview">OVERVIEW</a></li>
+           </div>
+         </ul>
+
+         <div class="mobile">
+           <ul>
+             <li><a href="#home"><img class="logo" src="./assets/images/logo.png"></a></li>
+             <li><a (click)="mobShow = !mobShow" href="#about"><img class="hamburger" src="./assets/images/hamburger.svg"></a></li>
+          </ul>
+         </div>
+
+         <div [hidden]="!mobShow" class=" mobile-dropdown u-textCenter">
+           <ul>
+             <li><a class="active" href="#about">FAQS</a></li>
+             <li><a class="active" href="#about">PARTNERS</a></li>
+             <li><a class="active" href="#about">TEAM</a></li>
+             <li><a class="active" href="#about">TOKENSALE</a></li>
+             <li><a class="active" href="#about">ROADMAP</a></li>
+             <li><a class="active" href="#about">BLACKBOX TOKEN</a></li>
+             <li><a class="active" href="#about">PLATFORM</a></li>
+             <li><a class="active" href="#about">OVERVIEW</a></li>
+          </ul>
+         </div>
+
+
+       </div>
+     </div>
+  </header>
+   <div id="a" class="section-a bg">
+     <div class="wrapper">
+       <div class="section-a-content">
+         <div class="Grid Grid--gutters Grid--cols-2">
+           <div class="Grid-cell">
+             <h1>THE MOST USER FRIENDLY</h1>
+             <h4>FULLY AUTOMATED STOCK ANALYSIS <br />
+                 TOL ON THE MARKET!
+             </h4>
+
+             <div class="button-padding">
+               <button class="button">INVESTING IN OUR ICO</button>
+             </div>
+           </div>
+
+
+
+           <div class="Grid-cell">
+             <h1><countdown-timer  class="timer-style"[end]="'2018-05-01 00:00:00'"></countdown-timer></h1>
+
+             <img class="timer" src="./assets/images/timer2.png">
+
+           </div>
+         </div>
+      </div>
+    </div>
+   </div>
+
+   <div id="overview" class="section-b">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1>BLACKBOX OVERVIEW</h1></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/line.png"></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
+          <div class="Grid-cell">
+            <img src="./assets/images/money.png">
+            <h4 class="section-b-subtext">FEATURES</h4>
+            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="Grid-cell">
+            <img src="./assets/images/wallet.png">
+            <h4 class="section-b-subtext">WALLET</h4>
+            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="Grid-cell">
+            <img src="./assets/images/bitcoin.png">
+            <h4 class="section-b-subtext">CLOUD MINING</h4>
+            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+    </div>
+   </div>
+
+   <div id="platform" class="section-c bg">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1>BLACKBOX CRYPTO PLATFORM</h1></div>
+       </div>
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/whiteLine.png"></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+       </div>
+
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><button class="button">INVESTING IN OUR ICO</button></div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-3 section-c-hide">
+         <div class="Grid-cell iphone-left">
+           <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
+             <div class="Grid-cell ">
+               <h4>AGGREGATION</h4>
+               <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
+             </div>
+             <div class="Grid-cell icon"><img src="./assets/images/telegram.png"></div>
+           </div>
+           <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
+             <div class="Grid-cell">
+               <h4>AGGREGATION</h4>
+               <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
+             </div>
+             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+           </div>
+           <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
+             <div class="Grid-cell">
+               <h4>AGGREGATION</h4>
+               <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
+             </div>
+             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+           </div>
+         </div>
+         <div class="Grid-cell">
+           <h1 class="u-textCenter"><img class="iphone-img" src="./assets/images/phone.png"></h1>
+         </div>
+         <div class="Grid-cell text-right">
+           <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
+             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+
+             <div class="Grid-cell" >
+               <h4>AGGREGATION</h4>
+               <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
+             </div>
+           </div>
+           <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
+             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+
+             <div class="Grid-cell">
+               <h4>CURATION</h4>
+               <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
+             </div>
+           </div>
+           <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
+             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+
+             <div class="Grid-cell">
+               <h4>ANALYSIS</h4>
+               <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-3 u-textCenter section-c-hide-mobile">
+          <div class="Grid-cell">
+            <img src="./assets/images/telegram.png">
+            <h4 class="section-b-subtext">FEATURES</h4>
+            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="Grid-cell">
+            <img src="./assets/images/profits.png">
+            <h4 class="section-b-subtext">WALLET</h4>
+            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="Grid-cell">
+            <img src="./assets/images/profits.png">
+            <h4 class="section-b-subtext">CLOUD MINING</h4>
+            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <div class="Grid Grid--gutters Grid--cols-3 u-textCenter section-c-hide-mobile">
+           <div class="Grid-cell">
+             <img src="./assets/images/profits.png">
+             <h4 class="section-b-subtext">FEATURES</h4>
+             <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+           <div class="Grid-cell">
+             <img src="./assets/images/profits.png">
+             <h4 class="section-b-subtext">WALLET</h4>
+             <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+           <div class="Grid-cell">
+             <img src="./assets/images/profits.png">
+             <h4 class="section-b-subtext">CLOUD MINING</h4>
+             <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+           <div class="Grid-cell">
+             <h1 class="u-textCenter"><img class="iphone-img" src="./assets/images/phone.png"></h1>
+           </div>
+         </div>
+
+         <div class="Grid Grid--full u-textCenter">
+
+        </div>
+    </div>
+   </div>
+
+   <div id="token" class="section-d">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1>BLACKBOX TOKEN?</h1></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/line.png"></div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-3 blackbox-token-section">
+         <div class="Grid-cell">
+           <img src="./assets/images/money.png">
+           <h4>BUILDING A COMMUNITY</h4>
+           <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+         <div class="Grid-cell">
+           <img src="./assets/images/money.png">
+           <h4>PAYMENT SCALING ISSUES</h4>
+           <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+         <div class="Grid-cell">
+           <img src="./assets/images/money.png">
+           <h4>MANAGING THE MONETARY SUPPLY</h4>
+           <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </div>
+       </div>
+    </div>
+   </div>
+
+   <div id="map" class="section-e bg">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1>ROAD MAP</h1></div>
+       </div>
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/whiteLine.png"></div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-2 desktop">
+         <!-- image one hide -->
+         <div [hidden]="imgOne" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="left-arrow" src="./assets/images/left-arrow.png"></div>
+         <div [hidden]="imgOne" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="right-arrow" src="./assets/images/right-arrow.png"></div>
+
+         <!-- image one hide -->
+         <div [hidden]="!imgTwo" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="left-arrow" src="./assets/images/left-arrow.png"></div>
+         <div [hidden]="!imgTwo" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="right-arrow" src="./assets/images/right-arrow.png"></div>
+
+       </div>
+       <div class="mobile">
+         <!-- image one hide -->
+         <div [hidden]="imgOne" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="left-arrow" src="./assets/images/left-arrow.png"></div>
+         <div [hidden]="imgOne" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="right-arrow" src="./assets/images/right-arrow.png"></div>
+
+         <!-- image one hide -->
+         <div [hidden]="!imgTwo" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="left-arrow" src="./assets/images/left-arrow.png"></div>
+         <div [hidden]="!imgTwo" class="Grid-cell"><img (click)="imgTwo = !imgTwo; imgOne = !imgOne" class="right-arrow" src="./assets/images/right-arrow.png"></div>
+       </div>
+
+        <div class="Grid Grid--full u-textCenter">
+           <div class="Grid-cell"><img [hidden]="imgOne" class="roadmap" src="./assets/images/roadmap.png"></div>
+
+           <div class="Grid-cell"><img [hidden]="!imgTwo" class="roadmap" src="./assets/images/timeline.png"></div>
+
+           <div class="Grid-cell"><img [hidden]="!imgThree" class="roadmap" src="./assets/images/roadmap.png"></div>
+        </div>
+     </div>
+   </div>
+
+   <div id="tokensale" class="section-f">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1>BLACKBOX TOKEN SALE</h1></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/line.png"></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img class="timeline" src="./assets/images/timeline.png"></div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-2 ">
+         <div class="Grid-cell">
+           <h4>TOKEN SALE PERIOD</h4>
+           <p>Sunday, October x at xxxx EDT / xxx GMT/ XXX HKT</p>
+
+           <h4>TOKEN SALE PERIOD</h4>
+           <p>NEO token only</p>
+
+           <h4>TOKEN SALE PERIOD</h4>
+           <p>xxxx Blackbox NEO</p>
+         </div>
+         <div class="Grid-cell">
+           <h4>TOKEN SALE PERIOD</h4>
+           <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+
+           <h4>BONUS STRUCTURE</h4>
+           <li><img class="blue-dot" src="./assets/images/blue-dot.png"><span class="blue-dot-text">Day 1 <span class="blue-dot-percent">30%</span> </span></li>
+
+           <li><img class="blue-dot" src="./assets/images/blue-dot.png"><span class="blue-dot-text">Day 2 <span class="blue-dot-percent">20%</span> </span></li>
+
+           <li><img class="blue-dot" src="./assets/images/blue-dot.png"><span class="blue-dot-text">Day 4 <span class="blue-dot-percent">7.10%</span> </span></li>
+
+           <li><img class="blue-dot" src="./assets/images/blue-dot.png"><span class="blue-dot-text">Day 8-14 <span class="blue-dot-percent-two">No Bonus</span> </span></li>
+
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div id="team" class="section-g">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1>MEET THE TEAM</h1></div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/line.png"></div>
+       </div>
+
+       <div class="Grid Grid--gutters Grid--cols-4 u-textCenter">
+         <div class="Grid-cell"><img class="team-img" src="./assets/images/jack.png"></div>
+         <div class="Grid-cell"><img class="team-img" src="./assets/images/jane.png"></div>
+         <div class="Grid-cell"><img class="team-img" src="./assets/images/david.png"></div>
+         <div class="Grid-cell"><img class="team-img" src="./assets/images/sophia.png"></div>
+       </div>
+
+         <div class="button-padding u-textCenter">
+           <button class="button-blue">VIEW ALL MEMBERS</button>
+         </div>
+     </div>
+
+   </div>
+
+   <div id="wallets" class="section-h bg">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter wallets-padding">
+         <div class="Grid-cell">
+           <h1>WALLETS</h1>
+         </div>
+
+           <div class="Grid-cell">
+             <img src="./assets/images/whiteLine.png">
+           </div>
+       </div>
+     </div>
+
+     <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
+       <div class="Grid-cell">
+         <img src="./assets/images/apple.png">
+         <h4>Avaiable For <br/> Mac </h4>
+       </div>
+
+       <div class="Grid-cell">
+         <img src="./assets/images/windows.png">
+         <h4>Avaiable For <br/> Windows</h4>
+       </div>
+
+       <div class="Grid-cell">
+         <img src="./assets/images/linux.png">
+         <h4>Avaiable For <br/> Linux</h4>
+       </div>
+     </div>
+   </div>
+
+   <div id="partners" class="section-i">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell">
+           <h1>SUPPORTED BY PARTNERS</h1>
+         </div>
+
+         <div class="Grid-cell partners-padding">
+           <img src="./assets/images/line.png">
+         </div>
+
+       </div>
+       <div class="Grid Grid--gutters Grid--cols-5 u-textCenter">
+         <div class="Grid-cell"><img src="./assets/images/purex.png"></div>
+         <div class="Grid-cell"><img src="./assets/images/mega.png"></div>
+         <div class="Grid-cell"><img src="./assets/images/windows-box.png"></div>
+         <div class="Grid-cell"><img src="./assets/images/rolex.png"></div>
+         <div class="Grid-cell"><img src="./assets/images/duro.png"></div>
+
+       </div>
+     </div>
+   </div>
+
+   <div id="faq" class="section-J">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell">
+           <h1>FREQUENTLY ASKED QUESTIONS</h1>
+         </div>
+
+         <div class="Grid-cell faq-padding">
+           <img src="./assets/images/line.png">
+         </div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+
+         <div class="Grid-cell">
+           <p (click)="faq1 = !faq1" [ngClass]="{'faq': !faq1, 'faq-blue': faq1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore
+           <img *ngIf="!faq1"  class="arrow" src="./assets/images/arrow.png">
+           <img  *ngIf="faq1" class="arrow" src="./assets/images/up-arrow.png">
+           </p>
+
+           <p class="faq-hidden" *ngIf="faq1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+         </div>
+         <div class="Grid-cell">
+           <p (click)="faq2 = !faq2" [ngClass]="{'faq': !faq2, 'faq-blue': faq2}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore
+           <img *ngIf="!faq2"  class="arrow" src="./assets/images/arrow.png">
+           <img  *ngIf="faq2" class="arrow" src="./assets/images/up-arrow.png">
+           </p>
+
+           <p class="faq-hidden" *ngIf="faq2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+         </div>
+         <div class="Grid-cell">
+           <p (click)="faq3 = !faq3" [ngClass]="{'faq': !faq3, 'faq-blue': faq3}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore
+           <img *ngIf="!faq3"  class="arrow" src="./assets/images/arrow.png">
+           <img  *ngIf="faq3" class="arrow" src="./assets/images/up-arrow.png">
+           </p>
+
+           <p class="faq-hidden" *ngIf="faq3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+         </div>
+         <div class="Grid-cell">
+           <p (click)="faq4 = !faq4" [ngClass]="{'faq': !faq4, 'faq-blue': faq4}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore
+           <img *ngIf="!faq4"  class="arrow" src="./assets/images/arrow.png">
+           <img  *ngIf="faq4" class="arrow" src="./assets/images/up-arrow.png">
+           </p>
+
+           <p class="faq-hidden" *ngIf="faq4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+           <img *ngIf="!faq4"  class="arrow" src="./assets/images/arrow.png">
+           <img  *ngIf="faq4" class="arrow" src="./assets/images/up-arrow.png">
+           </p>
+         </div>
+         <div class="Grid-cell">
+           <p (click)="faq5 = !faq5" [ngClass]="{'faq': !faq5, 'faq-blue': faq5}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore
+           <img *ngIf="!faq5"  class="arrow" src="./assets/images/arrow.png">
+           <img  *ngIf="faq5" class="arrow" src="./assets/images/up-arrow.png">
+         </p>
+
+           <p class="faq-hidden" *ngIf="faq5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div id="k" class="section-k bg">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell">
+           <h1>JOIN OUR COMMUNITY</h1>
+         </div>
+
+         <div class="Grid-cell join-padding">
+           <img src="./assets/images/whiteLine.png">
+         </div>
+       </div>
+       <div class="Grid Grid--gutters Grid--cols-5 u-textCenter">
+         <div class="Grid-cell">
+           <img src="./assets/images/facebook.png">
+           <h4>Facebook</h4>
+         </div>
+         <div class="Grid-cell">
+           <img src="./assets/images/twitter.png">
+           <h4>Twitter</h4>
+         </div>
+         <div class="Grid-cell">
+           <img src="./assets/images/telegramIcon.png">
+           <h4>Telegram</h4>
+         </div>
+         <div class="Grid-cell">
+           <img src="./assets/images/discord.png">
+           <h4>Discord</h4>
+         </div>
+         <div class="Grid-cell">
+           <img src="./assets/images/reddit.png">
+           <h4>Reddit</h4>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div id="l" class="section-l black-bg">
+     <div class="wrapper">
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell">
+          <a href="#home"><img class="logo" src="./assets/images/logo-blue.png"></a>
+           <hr>
+         </div>
+       </div>
+
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell">
+           <p>BLACKBOX CRYPTOS. Copy Rights, All Rights Reserved 2018</p>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+</body>
+</html>
