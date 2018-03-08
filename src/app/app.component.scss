@@ -109,7 +109,6 @@ strong {font-weight: 600;}
 .mobile{
   display: none;
 }
-
 .button{
   padding: 13px 33px 13px 33px;
   border-radius: 20px;
@@ -166,6 +165,11 @@ strong {font-weight: 600;}
   height: 70%;
   margin-top: -50px;
   padding: 20px;
+  -webkit-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+ -moz-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+ -ms-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out ;
+ -o-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+ transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
   h1, h2, h3, h4{
     color:black;
   }
@@ -176,15 +180,22 @@ strong {font-weight: 600;}
   }
   .section-b-subtext{
     margin-bottom: -40px;
+    animation-name: slidein;
+    animation-duration: .9s;
+
   }
 }
 
+.animated {
+  width: 200%;
+}
 .section-c{
   height: 100%;
   padding: 60px;
-  padding-bottom:26px;
+  padding-bottom:89px;
   h4{
     font-weight: normal;
+    margin-top:10px;
   }
   p{
     color:white;
@@ -342,6 +353,7 @@ strong {font-weight: 600;}
   .wrapper{
     padding-left: 120px;
     padding-right: 120px;
+    transition: all 0.3s;
   }
   h1, h2, h3, h4{
     color:black;
@@ -600,7 +612,7 @@ $gutter:1em;
   }
   .mobile-dropdown{
     background-color: black;
-    margin-top: -15px!important;
+    margin-top: -20px!important;
     background-color: rgba(0, 0, 0, .3);
     li {
     float: left;

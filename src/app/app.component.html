@@ -36,14 +36,14 @@
 
          <div [hidden]="!mobShow" class=" mobile-dropdown u-textCenter">
            <ul>
-             <li><a class="active" href="#about">FAQS</a></li>
-             <li><a class="active" href="#about">PARTNERS</a></li>
-             <li><a class="active" href="#about">TEAM</a></li>
-             <li><a class="active" href="#about">TOKENSALE</a></li>
-             <li><a class="active" href="#about">ROADMAP</a></li>
-             <li><a class="active" href="#about">BLACKBOX TOKEN</a></li>
-             <li><a class="active" href="#about">PLATFORM</a></li>
-             <li><a class="active" href="#about">OVERVIEW</a></li>
+             <li><a class="active" href="#faq">FAQS</a></li>
+             <li><a class="active" href="#partners">PARTNERS</a></li>
+             <li><a class="active" href="#team">TEAM</a></li>
+             <li><a class="active" href="#tokensale">TOKENSALE</a></li>
+             <li><a class="active" href="#map">ROADMAP</a></li>
+             <li><a class="active" href="#token">BLACKBOX TOKEN</a></li>
+             <li><a class="active" href="#platform">PLATFORM</a></li>
+             <li><a class="active" href="#overview">OVERVIEW</a></li>
           </ul>
          </div>
 
@@ -56,19 +56,17 @@
        <div class="section-a-content">
          <div class="Grid Grid--gutters Grid--cols-2">
            <div class="Grid-cell">
-             <h1>THE MOST USER FRIENDLY</h1>
-             <h4>FULLY AUTOMATED STOCK ANALYSIS <br />
-                 TOL ON THE MARKET!
-             </h4>
+             <h1 [@fadeIn-one]="fadeIn">LEARN. SHARE ANALYSIS. EARN CRYPTO.</h1>
+             <h4 [@fadeIn-two]="fadeIn">THE #1 SOCIAL TRADING PLATFORM</h4>
 
-             <div class="button-padding">
-               <button class="button">INVESTING IN OUR ICO</button>
+             <div [@fadeIn-three]="bounceIn" class="button-padding">
+               <button class="button">BBX PLATFORM</button>
              </div>
            </div>
 
 
 
-           <div class="Grid-cell">
+           <div [@bounceIn]="bounceIn" class="Grid-cell">
              <h1><countdown-timer  class="timer-style"[end]="'2018-05-01 00:00:00'"></countdown-timer></h1>
 
              <img class="timer" src="./assets/images/timer2.png">
@@ -81,33 +79,46 @@
 
    <div id="overview" class="section-b">
      <div class="wrapper">
-       <div class="Grid Grid--full u-textCenter">
-         <div class="Grid-cell"><h1>BLACKBOX OVERVIEW</h1></div>
+       <div  class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell"><h1 *ngIf="show" [@enterAnimationTop]>BLACKBOX OVERVIEW</h1></div>
        </div>
 
-       <div class="Grid Grid--full u-textCenter">
+       <div  class="Grid Grid--full u-textCenter">
          <div class="Grid-cell"><img src="./assets/images/line.png"></div>
        </div>
 
+
        <div class="Grid Grid--full u-textCenter">
-         <div class="Grid-cell"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+         <div class="Grid-cell"><p>BlackBox Crypto is a social trading platform that allows traders to share analysis and monetize their audience via micropayments and subscription fees paid in cryptocurrency.</p></div>
        </div>
 
        <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
+
           <div class="Grid-cell">
-            <img src="./assets/images/money.png">
-            <h4 class="section-b-subtext">FEATURES</h4>
-            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <img *ngIf="show1" [@enterAnimation] src="./assets/images/money.png">
+            <h4 class="section-b-subtext">Charts & Tools </h4>
+            <p> <span *ngIf="text1" [@text1]>- Live Charts</span> <br/>
+                <span *ngIf="text2" [@text2]>- All Major Exchanges</span> <br/>
+                <span *ngIf="text3" [@text3]>- Advanced Trading Tools</span><br/>
+                - Alert System
+            </p>
           </div>
           <div class="Grid-cell">
-            <img src="./assets/images/wallet.png">
-            <h4 class="section-b-subtext">WALLET</h4>
-            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <img *ngIf="show2" [@enterAnimation2] src="./assets/images/wallet.png">
+            <h4 class="section-b-subtext">Live Streaming</h4>
+            <p> - User Profiles <br/>
+                - Top Live Traders <br/>
+                - Watch Free & Paid Channels<br/>
+                - Trollbox
+            </p>
           </div>
           <div class="Grid-cell">
-            <img src="./assets/images/bitcoin.png">
+            <img *ngIf="show3" [@enterAnimation3] src="./assets/images/bitcoin.png">
             <h4 class="section-b-subtext">CLOUD MINING</h4>
-            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p> - Start a channel<br/>
+                - Set your own price <br/>
+                - Earn from your audience<br/>
+            </p>
           </div>
         </div>
     </div>
@@ -123,34 +134,34 @@
        </div>
 
        <div class="Grid Grid--full u-textCenter">
-         <div class="Grid-cell"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         <div class="Grid-cell"><p>BlackBox Crypto is created the first social trading platform. Blackbox has been designed to provide the greatest crypto trading resources to a community eager to trade. The platform offers a massive selection of cryptocurrency price charts & trading tools, and combined allows users to share their charts & analysis via live streaming to other users for free, or for payment. All earnings go to users.</p>
          </div>
        </div>
 
 
        <div class="Grid Grid--full u-textCenter">
-         <div class="Grid-cell"><button class="button">INVESTING IN OUR ICO</button></div>
+         <div class="Grid-cell"><button class="button">JOIN NOW</button></div>
        </div>
 
        <div class="Grid Grid--gutters Grid--cols-3 section-c-hide">
          <div class="Grid-cell iphone-left">
            <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
              <div class="Grid-cell ">
-               <h4>AGGREGATION</h4>
+               <h4>Basic & Advanced Indicators </h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
              <div class="Grid-cell icon"><img src="./assets/images/telegram.png"></div>
            </div>
            <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
              <div class="Grid-cell">
-               <h4>AGGREGATION</h4>
+               <h4>Live Markets</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
              <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
            </div>
            <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
              <div class="Grid-cell">
-               <h4>AGGREGATION</h4>
+               <h4>Biggest Exchanges</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
              <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
@@ -164,7 +175,7 @@
              <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
 
              <div class="Grid-cell" >
-               <h4>AGGREGATION</h4>
+               <h4>Live Chat w Other Traders</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
            </div>
@@ -172,7 +183,7 @@
              <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
 
              <div class="Grid-cell">
-               <h4>CURATION</h4>
+               <h4>Education Resources/Tools</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
            </div>
@@ -180,7 +191,7 @@
              <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
 
              <div class="Grid-cell">
-               <h4>ANALYSIS</h4>
+               <h4>Mobile Application</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
            </div>
@@ -232,10 +243,10 @@
     </div>
    </div>
 
-   <div id="token" class="section-d">
+   <div id="token" class="section-d" animateOnScroll animationName="bounceIn">
      <div class="wrapper">
        <div class="Grid Grid--full u-textCenter">
-         <div class="Grid-cell"><h1>BLACKBOX TOKEN?</h1></div>
+         <div class="Grid-cell"><h1>BBX Token</h1></div>
        </div>
 
        <div class="Grid Grid--full u-textCenter">
@@ -245,17 +256,17 @@
        <div class="Grid Grid--gutters Grid--cols-3 blackbox-token-section">
          <div class="Grid-cell">
            <img src="./assets/images/money.png">
-           <h4>BUILDING A COMMUNITY</h4>
+           <h4>Monetized/Incentivized Community</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
          <div class="Grid-cell">
            <img src="./assets/images/money.png">
-           <h4>PAYMENT SCALING ISSUES</h4>
+           <h4>Level Accessibility</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
          <div class="Grid-cell">
            <img src="./assets/images/money.png">
-           <h4>MANAGING THE MONETARY SUPPLY</h4>
+           <h4>Master Utility Nodes</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
        </div>
@@ -539,3 +550,110 @@
 
 </body>
 </html>
+
+
+
+
+<div class="container">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">ng2-animate-on-scroll example</h1>
+      <p class="lead">Scroll down for a few examples</p>
+    </div>
+  </div>
+
+  <div class="row p-5">
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card hide-on-init" animateOnScroll animationName="animated fadeInDown">
+        <div class="card-block">
+          <div class="card-title">
+            <h3>One</h3>
+          </div>
+          <div class="card-text">
+            <p>Cards that ...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card hide-on-init animated-delay-1" animateOnScroll animationName="animated fadeInDown">
+        <div class="card-block">
+          <div class="card-title">
+            <h3>Two</h3>
+          </div>
+          <div class="card-text">
+            <p>... fade in at ...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card hide-on-init animated-delay-2" animateOnScroll animationName="animated fadeInDown">
+        <div class="card-block">
+          <div class="card-title">
+            <h3>Three</h3>
+          </div>
+          <div class="card-text">
+            <p>... different times.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row p-5">
+    <div class="col hide-on-init" animateOnScroll animationName="animated fadeInLeft">
+      <h4>Divs containing other elements like buttons or forms</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet elit feugiat, venenatis turpis id, pharetra felis. Cras mollis vitae orci eget volutpat. Proin dapibus massa vitae lacus maximus, vitae cursus diam sodales. Curabitur laoreet nunc sit amet est sagittis rutrum. Nulla at ante sed elit scelerisque vestibulum. Vivamus commodo mauris ante, quis varius ante dictum vel. Mauris in est volutpat, auctor diam ut, pretium est. Suspendisse ...</p>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Left</button>
+        <button type="button" class="btn btn-secondary">Middle</button>
+        <button type="button" class="btn btn-secondary">Right</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row p-5">
+    <div class="col hide-on-init" animateOnScroll animationName="animated fadeInRight">
+      <h4>Sections of text</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet elit feugiat, venenatis turpis id, pharetra felis. Cras mollis vitae orci eget volutpat. Proin dapibus massa vitae lacus maximus, vitae cursus diam sodales. Curabitur laoreet nunc sit amet est sagittis rutrum. Nulla at ante sed elit scelerisque vestibulum. Vivamus commodo mauris ante, quis varius ante dictum vel. Mauris in est volutpat, auctor diam ut, pretium est. Suspendisse ...</p>
+    </div>
+  </div>
+
+  <div class="row p-5">
+    <div class="col">
+      <h4>Images</h4>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-lg-6 p-3">
+
+      <img src="../assets/sunset.jpg"
+           class="img-fluid rounded float-left hide-on-init"
+           animateOnScroll animationName="animated zoomInDown" />
+
+    </div>
+    <div class="col-md-12 col-lg-6 p-3">
+
+      <img src="../assets/tiger.jpg"
+           class="img-fluid rounded float-left hide-on-init"
+           animateOnScroll animationName="animated zoomInDown" />
+
+    </div>
+    <div class="col-md-12 col-lg-6 p-3">
+
+      <img src="../assets/mountains.jpg"
+           class="img-fluid rounded float-left hide-on-init"
+           animateOnScroll animationName="animated zoomInDown" />
+
+    </div>
+  </div>
+
+</div>
