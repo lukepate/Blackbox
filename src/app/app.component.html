@@ -56,17 +56,16 @@
        <div class="section-a-content">
          <div class="Grid Grid--gutters Grid--cols-2">
            <div class="Grid-cell">
-             <h1 [@fadeIn-one]="fadeIn">LEARN. SHARE ANALYSIS. EARN CRYPTO.</h1>
-             <h4 [@fadeIn-two]="fadeIn">THE #1 SOCIAL TRADING PLATFORM</h4>
+             <h1 [@text1]>LEARN. SHARE ANALYSIS. EARN CRYPTO.</h1>
+             <h4 [@text2]>THE #1 SOCIAL TRADING PLATFORM</h4>
 
-             <div [@fadeIn-three]="bounceIn" class="button-padding">
+             <div [@text2] class="button-padding">
                <button class="button">BBX PLATFORM</button>
              </div>
            </div>
 
 
-
-           <div [@bounceIn]="bounceIn" class="Grid-cell">
+           <div [@text1] class="Grid-cell">
              <h1><countdown-timer  class="timer-style"[end]="'2018-05-01 00:00:00'"></countdown-timer></h1>
 
              <img class="timer" src="./assets/images/timer2.png">
@@ -100,24 +99,24 @@
             <p> <span *ngIf="text1" [@text1]>- Live Charts</span> <br/>
                 <span *ngIf="text2" [@text2]>- All Major Exchanges</span> <br/>
                 <span *ngIf="text3" [@text3]>- Advanced Trading Tools</span><br/>
-                - Alert System
+                <span *ngIf="text4" [@text4]>- Alert System</span><br/>
             </p>
           </div>
           <div class="Grid-cell">
             <img *ngIf="show2" [@enterAnimation2] src="./assets/images/wallet.png">
             <h4 class="section-b-subtext">Live Streaming</h4>
-            <p> - User Profiles <br/>
-                - Top Live Traders <br/>
-                - Watch Free & Paid Channels<br/>
-                - Trollbox
+            <p> <span *ngIf="text1" [@text1]>- User Profiles</span> <br/>
+                <span *ngIf="text2" [@text2]>- Top Live Traders</span> <br/>
+                <span *ngIf="text3" [@text3]>- Watch Free & Paid Channels</span><br/>
+                <span *ngIf="text4" [@text4]>- Trollbox</span><br/>
             </p>
           </div>
           <div class="Grid-cell">
             <img *ngIf="show3" [@enterAnimation3] src="./assets/images/bitcoin.png">
             <h4 class="section-b-subtext">CLOUD MINING</h4>
-            <p> - Start a channel<br/>
-                - Set your own price <br/>
-                - Earn from your audience<br/>
+            <p> <span *ngIf="text1" [@text1]>- Start a channel</span> <br/>
+                <span *ngIf="text2" [@text2]>- Set your own price</span> <br/>
+                <span *ngIf="text3" [@text3]>- Earn from your audience</span><br/>
             </p>
           </div>
         </div>
@@ -157,22 +156,22 @@
                <h4>Live Markets</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
-             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+             <div class="Grid-cell icon"><img src="./assets/images/calendar.png"></div>
            </div>
            <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
              <div class="Grid-cell">
                <h4>Biggest Exchanges</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
-             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+             <div class="Grid-cell icon"><img src="./assets/images/analytics.png"></div>
            </div>
          </div>
-         <div class="Grid-cell">
+         <div *ngIf="iphone" [@iphone] class="Grid-cell">
            <h1 class="u-textCenter"><img class="iphone-img" src="./assets/images/phone.png"></h1>
          </div>
          <div class="Grid-cell text-right">
            <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
-             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+             <div class="Grid-cell icon"><img src="./assets/images/presentation.png"></div>
 
              <div class="Grid-cell" >
                <h4>Live Chat w Other Traders</h4>
@@ -180,7 +179,7 @@
              </div>
            </div>
            <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
-             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+             <div class="Grid-cell icon"><img src="./assets/images/smartphone.png"></div>
 
              <div class="Grid-cell">
                <h4>Education Resources/Tools</h4>
@@ -254,18 +253,18 @@
        </div>
 
        <div class="Grid Grid--gutters Grid--cols-3 blackbox-token-section">
-         <div class="Grid-cell">
-           <img src="./assets/images/money.png">
+         <div *ngIf="token1" [@token1] class="Grid-cell">
+           <img src="./assets/images/worldwide.png">
            <h4>Monetized/Incentivized Community</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
-         <div class="Grid-cell">
-           <img src="./assets/images/money.png">
+         <div *ngIf="token2" [@token2] class="Grid-cell">
+           <img src="./assets/images/cube.png">
            <h4>Level Accessibility</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
-         <div class="Grid-cell">
-           <img src="./assets/images/money.png">
+         <div *ngIf="token3" [@token3]  class="Grid-cell">
+           <img src="./assets/images/eve.png">
            <h4>Master Utility Nodes</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
@@ -365,11 +364,33 @@
          <div class="Grid-cell"><img src="./assets/images/line.png"></div>
        </div>
 
-       <div class="Grid Grid--gutters Grid--cols-4 u-textCenter">
-         <div class="Grid-cell"><img class="team-img" src="./assets/images/jack.png"></div>
-         <div class="Grid-cell"><img class="team-img" src="./assets/images/jane.png"></div>
-         <div class="Grid-cell"><img class="team-img" src="./assets/images/david.png"></div>
-         <div class="Grid-cell"><img class="team-img" src="./assets/images/sophia.png"></div>
+       <div class="Grid Grid--gutters Grid--cols-6 u-textCenter">
+         <div class="Grid-cell">
+
+           <img class="team-img rotate" src="./assets/images/gust.png" (mouseover)="gust=true " [hidden]="gust">
+           <img class="team-img rotate" src="./assets/images/gustHover.png" (mouseout)="gust=false" [hidden]="!gust">
+         </div>
+         <div class="Grid-cell">
+           <img class="team-img" src="./assets/images/eric.png" (mouseover)="eric=true" [hidden]="eric">
+           <img class="team-img" src="./assets/images/ericHover.png" (mouseout)="eric=false" [hidden]="!eric">
+         </div>
+         <div class="Grid-cell">
+           <img class="team-img" src="./assets/images/david.png" (mouseover)="david=true" [hidden]="david">
+           <img class="team-img" src="./assets/images/davidHover.png" (mouseout)="david=false" [hidden]="!david">
+         </div>
+         <div class="Grid-cell">
+           <img class="team-img" src="./assets/images/brandon.png" (mouseover)="brandon=true" [hidden]="brandon">
+           <img class="team-img" src="./assets/images/brandonHover.png" (mouseout)="brandon=false" [hidden]="!brandon">
+         </div>
+         <div class="Grid-cell">
+           <img class="team-img" src="./assets/images/jeff.png" (mouseover)="jeff=true" [hidden]="jeff">
+           <img class="team-img" src="./assets/images/jeffHovered.png" (mouseout)="jeff=false" [hidden]="!jeff">
+         </div>
+         <div class="Grid-cell">
+           <img class="team-img" src="./assets/images/keller.png" (mouseover)="keller=true" [hidden]="keller">
+           <img class="team-img" src="./assets/images/kellerHover.png" (mouseout)="keller=false" [hidden]="!keller">
+         </div>
+
        </div>
 
          <div class="button-padding u-textCenter">
@@ -393,17 +414,17 @@
      </div>
 
      <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
-       <div class="Grid-cell">
+       <div *ngIf="wallet1" [@token1] class="Grid-cell">
          <img src="./assets/images/apple.png">
          <h4>Avaiable For <br/> Mac </h4>
        </div>
 
-       <div class="Grid-cell">
+       <div *ngIf="wallet2" [@token2] class="Grid-cell">
          <img src="./assets/images/windows.png">
          <h4>Avaiable For <br/> Windows</h4>
        </div>
 
-       <div class="Grid-cell">
+       <div *ngIf="wallet3" [@token3] class="Grid-cell">
          <img src="./assets/images/linux.png">
          <h4>Avaiable For <br/> Linux</h4>
        </div>
@@ -550,110 +571,3 @@
 
 </body>
 </html>
-
-
-
-
-<div class="container">
-
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">ng2-animate-on-scroll example</h1>
-      <p class="lead">Scroll down for a few examples</p>
-    </div>
-  </div>
-
-  <div class="row p-5">
-
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card hide-on-init" animateOnScroll animationName="animated fadeInDown">
-        <div class="card-block">
-          <div class="card-title">
-            <h3>One</h3>
-          </div>
-          <div class="card-text">
-            <p>Cards that ...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card hide-on-init animated-delay-1" animateOnScroll animationName="animated fadeInDown">
-        <div class="card-block">
-          <div class="card-title">
-            <h3>Two</h3>
-          </div>
-          <div class="card-text">
-            <p>... fade in at ...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card hide-on-init animated-delay-2" animateOnScroll animationName="animated fadeInDown">
-        <div class="card-block">
-          <div class="card-title">
-            <h3>Three</h3>
-          </div>
-          <div class="card-text">
-            <p>... different times.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="row p-5">
-    <div class="col hide-on-init" animateOnScroll animationName="animated fadeInLeft">
-      <h4>Divs containing other elements like buttons or forms</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet elit feugiat, venenatis turpis id, pharetra felis. Cras mollis vitae orci eget volutpat. Proin dapibus massa vitae lacus maximus, vitae cursus diam sodales. Curabitur laoreet nunc sit amet est sagittis rutrum. Nulla at ante sed elit scelerisque vestibulum. Vivamus commodo mauris ante, quis varius ante dictum vel. Mauris in est volutpat, auctor diam ut, pretium est. Suspendisse ...</p>
-
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary">Left</button>
-        <button type="button" class="btn btn-secondary">Middle</button>
-        <button type="button" class="btn btn-secondary">Right</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="row p-5">
-    <div class="col hide-on-init" animateOnScroll animationName="animated fadeInRight">
-      <h4>Sections of text</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet elit feugiat, venenatis turpis id, pharetra felis. Cras mollis vitae orci eget volutpat. Proin dapibus massa vitae lacus maximus, vitae cursus diam sodales. Curabitur laoreet nunc sit amet est sagittis rutrum. Nulla at ante sed elit scelerisque vestibulum. Vivamus commodo mauris ante, quis varius ante dictum vel. Mauris in est volutpat, auctor diam ut, pretium est. Suspendisse ...</p>
-    </div>
-  </div>
-
-  <div class="row p-5">
-    <div class="col">
-      <h4>Images</h4>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 col-lg-6 p-3">
-
-      <img src="../assets/sunset.jpg"
-           class="img-fluid rounded float-left hide-on-init"
-           animateOnScroll animationName="animated zoomInDown" />
-
-    </div>
-    <div class="col-md-12 col-lg-6 p-3">
-
-      <img src="../assets/tiger.jpg"
-           class="img-fluid rounded float-left hide-on-init"
-           animateOnScroll animationName="animated zoomInDown" />
-
-    </div>
-    <div class="col-md-12 col-lg-6 p-3">
-
-      <img src="../assets/mountains.jpg"
-           class="img-fluid rounded float-left hide-on-init"
-           animateOnScroll animationName="animated zoomInDown" />
-
-    </div>
-  </div>
-
-</div>

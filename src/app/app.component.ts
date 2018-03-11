@@ -67,7 +67,7 @@ import { trigger, style, animate, transition } from '@angular/animations';
     'text1', [
       transition(':enter', [
         style({transform: 'translateY(10%)', opacity: 0}),
-        animate('1.2s 1.5s ease-out')
+        animate('.5s 1s ease-out')
       ])
     ]
   ),
@@ -83,10 +83,50 @@ import { trigger, style, animate, transition } from '@angular/animations';
     'text3', [
       transition(':enter', [
         style({transform: 'translateY(10%)', opacity: 0}),
-        animate('1s 3s ease-out')
+        animate('.5s 3s ease-out')
       ])
     ]
-  )
+  ),
+  trigger(
+    'text4', [
+      transition(':enter', [
+        style({transform: 'translateY(10%)', opacity: 0}),
+        animate('.5s 4s ease-out')
+      ])
+    ]
+  ),
+  trigger(
+    'iphone', [
+      transition(':enter', [
+        style({transform: 'translateY(10%)', opacity: 0}),
+        animate('.5s 0s ease-out')
+      ])
+    ]
+  ),
+  trigger(
+    'token1', [
+      transition(':enter', [
+        style({transform: 'translateY(10%)', opacity: 0}),
+        animate('.5s 0s ease-out')
+      ])
+    ]
+  ),
+  trigger(
+    'token2', [
+      transition(':enter', [
+        style({transform: 'translateY(10%)', opacity: 0}),
+        animate('.5s 1s ease-out')
+      ])
+    ]
+  ),
+  trigger(
+    'token3', [
+      transition(':enter', [
+        style({transform: 'translateY(10%)', opacity: 0}),
+        animate('.5s 2s ease-out')
+      ])
+    ]
+  ),
 ]
 })
 export class AppComponent {
@@ -106,10 +146,23 @@ export class AppComponent {
   text1: any = false;
   text2: any = false;
   text3: any = false;
+  text4: any = false;
+
+  iphone: any = false;
+
+  token1: any = false;
+  token2: any = false;
+  token3: any = false;
+
+  wallet1: any = false;
+  wallet2: any = false;
+  wallet3: any = false;
 
   @HostListener('window:scroll', ['$event'])
 
   ngOnInit() {
+    console.log(window.pageYOffset)
+
     if(window.pageYOffset > 200){
       this.show = true;
     }
@@ -126,6 +179,20 @@ export class AppComponent {
       this.text1 = true;
       this.text2 = true;
       this.text3 = true;
+      this.text4 = true;
+    }
+    if(window.pageYOffset > 1400){
+      this.iphone = true;
+    }
+    if(window.pageYOffset > 1470){
+      this.token1 = true;
+      this.token2 = true;
+      this.token3 = true;
+    }
+    if(window.pageYOffset > 4350){
+      this.wallet1 = true;
+      this.wallet2 = true;
+      this.wallet3 = true;
     }
   }
 
