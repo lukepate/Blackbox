@@ -316,6 +316,10 @@ strong {font-weight: 600;}
   }
   .team-img:hover{
     width: 340px;
+    transition: all 0.5s ease 
+  }
+  .team-img-p{
+    margin-top: -30px;
   }
 
 }
