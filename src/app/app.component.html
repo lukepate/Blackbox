@@ -29,8 +29,9 @@
 
          <div class="mobile">
            <ul>
-             <li><a href="#home"><img class="logo" src="./assets/images/logo.png"></a></li>
-             <li><a (click)="mobShow = !mobShow" href="#about"><img class="hamburger" src="./assets/images/hamburger.svg"></a></li>
+             <!-- <a href="#home"><img class="logo u-textCenter" src="./assets/images/logo.png"></a> -->
+             <li><a href="#home"><img class="logo u-textCenter" src="./assets/images/logo.png"></a></li>
+             <!-- <li><a (click)="mobShow = !mobShow" href="#about"><img class="hamburger" src="./assets/images/hamburger.svg"></a></li> -->
           </ul>
          </div>
 
@@ -94,7 +95,7 @@
        <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
 
           <div class="Grid-cell">
-            <img *ngIf="show1" [@enterAnimation] src="./assets/images/money.png">
+            <img class="icon" *ngIf="show1" [@enterAnimation] src="./assets/images/money.png">
             <h4 class="section-b-subtext">Charts & Tools </h4>
             <p> <span *ngIf="text1" [@text1]>- Live Charts</span> <br/>
                 <span *ngIf="text2" [@text2]>- All Major Exchanges</span> <br/>
@@ -103,7 +104,7 @@
             </p>
           </div>
           <div class="Grid-cell">
-            <img *ngIf="show2" [@enterAnimation2] src="./assets/images/wallet.png">
+            <img class="iconTwo" *ngIf="show2" [@enterAnimation2] src="./assets/images/wallet.png">
             <h4 class="section-b-subtext">Live Streaming</h4>
             <p> <span *ngIf="text1" [@text1]>- User Profiles</span> <br/>
                 <span *ngIf="text2" [@text2]>- Top Live Traders</span> <br/>
@@ -112,7 +113,7 @@
             </p>
           </div>
           <div class="Grid-cell">
-            <img *ngIf="show3" [@enterAnimation3] src="./assets/images/bitcoin.png">
+            <img class="iconThree" *ngIf="show3" [@enterAnimation3] src="./assets/images/bitcoin.png">
             <h4 class="section-b-subtext">CLOUD MINING</h4>
             <p> <span *ngIf="text1" [@text1]>- Start a channel</span> <br/>
                 <span *ngIf="text2" [@text2]>- Set your own price</span> <br/>
@@ -123,7 +124,7 @@
     </div>
    </div>
 
-   <div id="platform" class="section-c bg">
+   <div id="platform" class="section-c bg-left">
      <div class="wrapper">
        <div class="Grid Grid--full u-textCenter">
          <div class="Grid-cell"><h1>BLACKBOX CRYPTO PLATFORM</h1></div>
@@ -149,7 +150,7 @@
                <h4>Basic & Advanced Indicators </h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
-             <div class="Grid-cell icon"><img src="./assets/images/telegram.png"></div>
+             <div class="Grid-cell icon iconTwo"><img src="./assets/images/telegram.png"></div>
            </div>
            <div class="Grid Grid--gutters Grid--cols-2 u-textRight">
              <div class="Grid-cell">
@@ -163,7 +164,7 @@
                <h4>Biggest Exchanges</h4>
                <p class="icon-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo </p>
              </div>
-             <div class="Grid-cell icon"><img src="./assets/images/analytics.png"></div>
+             <div class="Grid-cell icon iconThree"><img src="./assets/images/analytics.png"></div>
            </div>
          </div>
          <div *ngIf="iphone" [@iphone] class="Grid-cell">
@@ -171,7 +172,7 @@
          </div>
          <div class="Grid-cell text-right">
            <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
-             <div class="Grid-cell icon"><img src="./assets/images/presentation.png"></div>
+             <div class="Grid-cell iconThree"><img src="./assets/images/presentation.png"></div>
 
              <div class="Grid-cell" >
                <h4>Live Chat w Other Traders</h4>
@@ -187,7 +188,7 @@
              </div>
            </div>
            <div class="Grid Grid--gutters Grid--cols-2 u-textLeft">
-             <div class="Grid-cell icon"><img src="./assets/images/profits.png"></div>
+             <div class="Grid-cell icon iconTwo"><img src="./assets/images/profits.png"></div>
 
              <div class="Grid-cell">
                <h4>Mobile Application</h4>
@@ -254,17 +255,17 @@
 
        <div class="Grid Grid--gutters Grid--cols-3 blackbox-token-section">
          <div *ngIf="token1" [@token1] class="Grid-cell">
-           <img src="./assets/images/worldwide.png">
+           <img class="icon" src="./assets/images/worldwide.png">
            <h4>Monetized/Incentivized Community</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
          <div *ngIf="token2" [@token2] class="Grid-cell">
-           <img src="./assets/images/cube.png">
+           <img class="iconTwo" src="./assets/images/cube.png">
            <h4>Level Accessibility</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
          <div *ngIf="token3" [@token3]  class="Grid-cell">
-           <img src="./assets/images/eve.png">
+           <img class="iconThree" src="./assets/images/eve.png">
            <h4>Master Utility Nodes</h4>
            <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
          </div>
@@ -272,7 +273,7 @@
     </div>
    </div>
 
-   <div id="map" class="section-e bg">
+   <div id="map" class="section-e bg-center">
      <div class="wrapper">
        <div class="Grid Grid--full u-textCenter">
          <div class="Grid-cell"><h1>ROAD MAP</h1></div>
@@ -325,20 +326,18 @@
          <div class="Grid-cell"><img class="timeline" src="./assets/images/timeline.png"></div>
        </div>
 
-       <div class="Grid Grid--gutters Grid--cols-2 ">
+       <div class="Grid Grid--gutters Grid--cols-2 token-sale">
          <div class="Grid-cell">
-           <h4>TOKEN SALE PERIOD</h4>
-           <p>Sunday, October x at xxxx EDT / xxx GMT/ XXX HKT</p>
+           <h4>February</h4>
+           <p>Initial Token Sale Announcement, Blackbox Website</p>
 
-           <h4>TOKEN SALE PERIOD</h4>
-           <p>NEO token only</p>
+           <h4>March</h4>
+           <p>Initial Coin Offering, Team & Influencer Recruitment, Coin Delivery</p>
 
-           <h4>TOKEN SALE PERIOD</h4>
-           <p>xxxx Blackbox NEO</p>
          </div>
          <div class="Grid-cell">
-           <h4>TOKEN SALE PERIOD</h4>
-           <p>Lorem ipsum dolor sit amet, at cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+           <h4>April</h4>
+           <p>Begin Building BBX Platform</p>
 
            <h4>BONUS STRUCTURE</h4>
            <li><img class="blue-dot" src="./assets/images/blue-dot.png"><span class="blue-dot-text">Day 1 <span class="blue-dot-percent">30%</span> </span></li>
@@ -406,7 +405,7 @@
 
    </div>
 
-   <div id="wallets" class="section-h bg">
+   <div id="wallets" class="section-h bg-right">
      <div class="wrapper">
        <div class="Grid Grid--full u-textCenter wallets-padding">
          <div class="Grid-cell">
@@ -532,25 +531,25 @@
            <img src="./assets/images/whiteLine.png">
          </div>
        </div>
-       <div class="Grid Grid--gutters Grid--cols-5 u-textCenter">
+       <div class="Grid Grid--gutters Grid--cols-5 u-textCenter token-sale">
          <div class="Grid-cell">
-           <img src="./assets/images/facebook.png">
+           <img class="icon" src="./assets/images/facebook.png">
            <h4>Facebook</h4>
          </div>
          <div class="Grid-cell">
-           <img src="./assets/images/twitter.png">
+           <img class="iconTwo" src="./assets/images/twitter.png">
            <h4>Twitter</h4>
          </div>
          <div class="Grid-cell">
-           <img src="./assets/images/telegramIcon.png">
+           <img class="iconThree" src="./assets/images/telegramIcon.png">
            <h4>Telegram</h4>
          </div>
          <div class="Grid-cell">
-           <img src="./assets/images/discord.png">
+           <img class="iconTwo" src="./assets/images/discord.png">
            <h4>Discord</h4>
          </div>
          <div class="Grid-cell">
-           <img src="./assets/images/reddit.png">
+           <img class="icon" src="./assets/images/reddit.png">
            <h4>Reddit</h4>
          </div>
        </div>

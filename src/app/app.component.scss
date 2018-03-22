@@ -22,7 +22,22 @@ html,body {
   color: #404040;
   margin: -8px!important;
   margin-bottom: -10px!important;
+}
 
+.icon{
+   position: relative;
+  x-transition: all 2s ease-in-out;
+  animation: ani 2.7s infinite;
+}
+.iconTwo{
+   position: relative;
+  x-transition: all 3s ease-in-out;
+  animation: ani 3.7s infinite;
+}
+.iconThree{
+   position: relative;
+  x-transition: all 4s ease-in-out;
+  animation: ani 1.7s infinite;
 }
 
 .wrapper{
@@ -33,6 +48,29 @@ html,body {
 
 .bg{
   background: url(./assets/images/blue-bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.bg-left{
+  background: url(./assets/images/blue-bg-left.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-right{
+  background: url(./assets/images/blue-bg-right.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-center{
+  background: url(./assets/images/blue-bg-center.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -156,7 +194,7 @@ strong {font-weight: 600;}
     z-index: 2;
     margin-top: 165px;
     margin-left: 142px;
-    font-size: 47px;
+    font-size: 46px;
   }
 }
 
@@ -191,7 +229,7 @@ strong {font-weight: 600;}
 }
 .section-c{
   height: 100%;
-  padding: 60px;
+  padding: 260px 60px 60px 60px;
   padding-bottom:89px;
   h4{
     font-weight: normal;
@@ -240,7 +278,7 @@ strong {font-weight: 600;}
 
 .section-e{
   height: 60%;
-  padding: 20px;
+  padding: 309px 20px 310px 20px;
   .roadmap{
     width: 100%;
     position: relative;
@@ -315,8 +353,7 @@ strong {font-weight: 600;}
     padding: 40px 0px 40px 0px;
   }
   .team-img:hover{
-    width: 340px;
-    transition: all 0.5s ease 
+    transition: all 0.5s ease
   }
   .team-img-p{
     margin-top: -30px;
@@ -328,7 +365,7 @@ strong {font-weight: 600;}
 .section-h{
 
   height: 30%;
-  padding: 60px;
+  padding: 400px 60px 60px 60px;
   h4{
     font-weight: normal;
     padding-bottom: 20px;
@@ -568,6 +605,15 @@ $gutter:1em;
     width: 227px;
     margin-left: -113px;
   }
+  .section-c {
+    height: 100%;
+    padding: 60px 60px 60px 60px;
+    padding-bottom: 357px;
+  }
+  .bg-left {
+    background: url(./assets/images/blue-bg.jpg) no-repeat center center;
+    background-size: cover;
+  }
 }
 @media all and (max-width: 1100px) {
   .header{
@@ -586,14 +632,20 @@ $gutter:1em;
   .section-c-hide{
     display:none;
   }
-  .section-c{
-    padding-bottom: 356px;
+  .section-c {
+    height: 100%;
+    padding: 60px 60px 60px 60px;
+    padding-bottom: 357px;
   }
   .section-c .iphone-img {
     position: absolute;
     margin-top: -8px;
     width: 227px;
     margin-left: -113px;
+  }
+  .bg-left {
+    background: url(./assets/images/blue-bg.jpg) no-repeat center center;
+    background-size: cover;
   }
 }
 
@@ -616,8 +668,8 @@ $gutter:1em;
   }
   .header .logo{
     margin-top: -9px;
-    width: 90%;
-    margin-left: 30px;
+    // width: 90%;
+    // margin-left: 30px;
   }
   .mobile-dropdown{
     background-color: black;
@@ -715,23 +767,95 @@ $gutter:1em;
     padding-left: 0px!important;
     padding-right: 0px!important;
   }
+
 }
+// iphone 8 plus
+@media all and (max-width: 414px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .Grid--gutters {
+    margin-left: -2em;
+  }
+  .section-a .timer {
+    margin-left: -4px;
+    padding-top: 50px;
+    margin-top: -80px;
+  }
+  .section-a .timer-style {
+    position: absolute;
+    z-index: 2;
+    margin-top: 134px;
+    margin-left: -128px;
+    font-size: 47px;
+  }
+  .section-g {
+    background-color: white;
+    height: 60%;
+    padding: 0px 60px;
+  }
+  .token-sale{
+    margin-left: -1em;
+  }
+  .section-g .team-img {
+      margin-left: 15px;
+  }
+  .section-d {
+    background-color: white;
+    height: 50%;
+    padding: 60px;
+  }
+
+}
+// iphone 8
 @media all and (max-width: 375px) {
 
   .hamburger{
-    width: 25%;
+    width: 45%;
     margin-top: -6px;
     float: right;
-    margin-left: -386px;
+    margin-left: -436px;
   }
-  // .section-e {
-  //   padding: 50px;
-  // }
+  .section-g .team-img {
+    margin-left: 0px;
+  }
+  .section-k{
+    padding: 80px;
+  }
+  .token-sale{
+    margin-left: -1em;
+  }
+  .header .logo {
+      margin-top: -9px;
+      width: 81%;
+      margin-left: 24px;
+  }
   .right-arrow{
     margin-top: -40px;
   }
   .left-arrow{
     margin-left: 10px;
+  }
+  .section-a .section-a-content {
+    padding-top: 33px;
+    padding-bottom: 90px;
+    text-align: center;
+  }
+  .section-a .timer {
+    margin-left: -4px;
+    padding-top: 50px;
+    width: 88%;
+    margin-top: -80px;
+  }
+  .section-a .timer-style {
+    position: absolute;
+    z-index: 2;
+    margin-top: 126px;
+    margin-left: -111px;
+    font-size: 42px;
+  }
+  h4{
+    font-size: 16px;
   }
 
 }
@@ -849,10 +973,22 @@ $gutter:1em;
   }
 }
 
-// Contents classes
-.content-1of1::before { content: "1"; }
-.content-1of2::before { content: "1/2"; }
-.content-1of3::before { content: "1/3"; }
-.content-1of4::before { content: "1/4"; }
-.content-1of6::before { content: "1/6"; }
-.content-1of12::before { content: "1/12"; }
+@keyframes ani {
+  0% {
+    left: 0;
+  }
+
+  30% {
+    left: 1px;
+    top: 1px;
+  }
+  70% {
+    left: 2px;
+    top: 2px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
