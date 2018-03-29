@@ -54,7 +54,7 @@ html,body {
   background-size: cover;
 }
 .bg-left{
-  background: url(./assets/images/blue-bg-left.png) no-repeat center center;
+  background: url(./assets/images/blue-bg-top.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,7 +62,7 @@ html,body {
 }
 
 .bg-right{
-  background: url(./assets/images/blue-bg-right.png) no-repeat center center;
+  background: url(./assets/images/blue-bg-top.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -974,21 +974,14 @@ $gutter:1em;
 }
 
 @keyframes ani {
-  0% {
-    left: 0;
-  }
 
-  30% {
-    left: 1px;
-    top: 1px;
+  0%{
+  bottom: 0;
   }
-  70% {
-    left: 2px;
-    top: 2px;
+  50% {
+    bottom: 10px;
   }
-
   100% {
-    left: 0px;
-    top: 0px;
+  bottom: 0;
   }
 }
