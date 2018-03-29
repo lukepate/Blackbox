@@ -363,7 +363,27 @@
          <div class="Grid-cell"><img src="./assets/images/line.png"></div>
        </div>
 
-       <div class="Grid Grid--gutters Grid--cols-6 u-textCenter">
+       <div class="team-img-container" [ngStyle]="{'margin-left': teamMargin}">
+         <img class="team-img rotate" src="./assets/images/gust.png" (mouseover)="gust=true " [hidden]="gust">
+         <img class="team-img rotate" src="./assets/images/gustHover.png" (mouseout)="gust=false" [hidden]="!gust">
+
+         <img class="team-img" src="./assets/images/eric.png" (mouseover)="eric=true" [hidden]="eric">
+         <img class="team-img" src="./assets/images/ericHover.png" (mouseout)="eric=false" [hidden]="!eric">
+
+         <img class="team-img" src="./assets/images/david.png" (mouseover)="david=true" [hidden]="david">
+         <img class="team-img" src="./assets/images/davidHover.png" (mouseout)="david=false" [hidden]="!david">
+
+         <img class="team-img" src="./assets/images/brandon.png" (mouseover)="brandon=true" [hidden]="brandon">
+         <img class="team-img" src="./assets/images/brandonHover.png" (mouseout)="brandon=false" [hidden]="!brandon">
+
+         <img class="team-img" src="./assets/images/jeff.png" (mouseover)="jeff=true" [hidden]="jeff">
+         <img class="team-img" src="./assets/images/jeffHovered.png" (mouseout)="jeff=false" [hidden]="!jeff">
+
+         <img class="team-img" src="./assets/images/keller.png" (mouseover)="keller=true" [hidden]="keller">
+         <img class="team-img" src="./assets/images/kellerHover.png" (mouseout)="keller=false" [hidden]="!keller">
+       </div>
+
+       <!-- <div class="Grid Grid--gutters Grid--cols-6 u-textCenter">
          <div class="Grid-cell">
 
            <img class="team-img rotate" src="./assets/images/gust.png" (mouseover)="gust=true " [hidden]="gust">
@@ -396,10 +416,11 @@
            <p class="team-img-p"[hidden]="!keller">Keller Reid is a fintech veteran with 13 years of experience in all aspects of the financial services industry. He has advised fintech startups and serves on multiple boards in addition to his work in the wealth management space. Keller brings his vast experience in the financial technology to oversee the final stages of the development and launch of Blackboxstocks.com. Keller collaborates on all facets of technology needed to bring the company’s website to enterprise level. Keller coordinates projects and communications between staff and vendors and engages the development of strategic partnerships.</p>
          </div>
 
-       </div>
+       </div> -->
 
          <div class="button-padding u-textCenter">
-           <button class="button-blue">VIEW ALL MEMBERS</button>
+           <button class="button-blue" (click)="moveLeft()">left</button>
+           <button class="button-blue" (click)="moveRight()">right</button>
          </div>
      </div>
 

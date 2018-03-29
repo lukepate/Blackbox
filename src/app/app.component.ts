@@ -157,6 +157,8 @@ export class AppComponent {
   wallet1: any = false;
   wallet2: any = false;
   wallet3: any = false;
+  teamMargin: any;
+  margin: any = 0;
 
   @HostListener('window:scroll', ['$event'])
 
@@ -193,6 +195,21 @@ export class AppComponent {
       this.wallet1 = true;
       this.wallet2 = true;
       this.wallet3 = true;
+    }
+  }
+
+  moveLeft(){
+    if(this.margin < 0){
+    this.margin = this.margin + 200;
+    this.teamMargin = this.margin + "px";
+    }
+  }
+
+  moveRight(){
+    if(this.margin > -600){
+    this.margin = this.margin - 200;
+    this.teamMargin = this.margin + "px";
+    console.log(this.teamMargin)
     }
   }
 
