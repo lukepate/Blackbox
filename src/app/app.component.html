@@ -363,12 +363,28 @@
          <div class="Grid-cell"><img src="./assets/images/line.png"></div>
        </div>
 
+        <div class="Grid Grid--full u-textCenter">
+          <div class="Grid-cell">
+            <img class="team-img rotate" src="./assets/images/gust.png" (click)="gustClick = !gustClick" [hidden]="!gustClick">
+
+            <p class="team-img-p"[hidden]="!gustClick">Gust Kepler serves as the Chief Executive Officer for Blackboxstocks, Inc.  Mr. Kepler is a firm believer in the adage “simplicity sells”. His mission as the founder and developer of the company’s technology is to offer the general public a comprehensive financial technology tool in a simple and user friendly format. In addition to overseeing all aspects of product development, Kepler is responsible for strategic planning, marketing and corporate financial decisions. Mr. Kepler is a sees the great potential for decentralized applications built using cryptocurrency and is pioneering social trading with Blackbox Crypto</p>
+         </div>
+       </div>
+       <div class="Grid Grid--full u-textCenter">
+         <div class="Grid-cell">
+           <img class="team-img rotate" src="./assets/images/eric.png" (click)="ericClick = !ericClick" [hidden]="!ericClick || gustClick">
+
+           <p class="team-img-p"[hidden]="!ericClick || gustClick">Eric Pharis has been working in quantitative finance for 20 years.  Pharis earned his bachelor of science in Mechanical Engineering from The University of Texas Austin in 1998 and his Masters Degree in Operations Research from Cornell University with a certificate in Financial Engineering in 1999. While studying at UT, Pharis also worked for IBM and developed financial models to assist in output optimization.  After graduating Cornell, Pharis moved to Wall Street and began proprietary trading at Daytek Securities, the founders of INET, a pioneer in the area of electronic and algo trading.</p>
+        </div>
+      </div>
+
        <div class="team-img-container" [ngStyle]="{'margin-left': teamMargin}">
+
          <img class="team-img rotate" src="./assets/images/gust.png" (mouseover)="gust=true " [hidden]="gust">
-         <img class="team-img rotate" src="./assets/images/gustHover.png" (mouseout)="gust=false" [hidden]="!gust">
+         <img class="team-img rotate" src="./assets/images/gustHover.png" (mouseout)="gust=false" [hidden]="!gust" (click)="gustClick = !gustClick">
 
          <img class="team-img" src="./assets/images/eric.png" (mouseover)="eric=true" [hidden]="eric">
-         <img class="team-img" src="./assets/images/ericHover.png" (mouseout)="eric=false" [hidden]="!eric">
+         <img class="team-img" src="./assets/images/ericHover.png" (mouseout)="eric=false" [hidden]="!eric" (click)="ericClick = !ericClick">
 
          <img class="team-img" src="./assets/images/david.png" (mouseover)="david=true" [hidden]="david">
          <img class="team-img" src="./assets/images/davidHover.png" (mouseout)="david=false" [hidden]="!david">
@@ -419,8 +435,8 @@
        </div> -->
 
          <div class="button-padding u-textCenter">
-           <button class="button-blue" (click)="moveLeft()">left</button>
-           <button class="button-blue" (click)="moveRight()">right</button>
+           <button class="button-blue" (click)="moveLeft()"><</button>
+           <button class="button-blue" (click)="moveRight()">></button>
          </div>
      </div>
 

@@ -200,14 +200,14 @@ export class AppComponent {
 
   moveLeft(){
     if(this.margin < 0){
-    this.margin = this.margin + 200;
+    this.margin = this.margin + 300;
     this.teamMargin = this.margin + "px";
     }
   }
 
   moveRight(){
     if(this.margin > -600){
-    this.margin = this.margin - 200;
+    this.margin = this.margin - 300;
     this.teamMargin = this.margin + "px";
     console.log(this.teamMargin)
     }
